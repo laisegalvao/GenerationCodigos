@@ -1,32 +1,31 @@
 package POO;
 
 public class Carro {
-//criou um carro e vai dar alguns métodos que serão manipulados através dos seus atributos.
-	
+//criação de atributos:
 	String cor;
-	String modelo;               //4 atributos da classe CARRO.
+	String modelo;
 	double velocidadeAtual;
 	double velocidadeMaxima;
-	
-	//criação dos métodos:
-	
-	void liga() //esse método vai indicar q o carro está ligado quando ele for chamado.
+//criação de métodos:	
+	void liga()
 	{
-		System.out.println("O carro está ligado.");
-	//como aqui só tem uma indicação de uma frase, n está retornando nenhum conteúdo.
+		System.out.println("O carro está ligado."); 
+//como só tem a indicação de uma frase não vai precisar retornar nada. Não tem parametro no liga()
 	}
-	void acelera(double quantidade)  //passou o parametro(double..)
+	void acelera(double quantidade)// passou o parametro double com variável quantidade
 	{
-		double velocidadeNova = this.velocidadeAtual+quantidade;   //pq quando acionar o método acelera ele vai criar uma
-		//velocidade nova de velocidade
-		this.velocidadeAtual = velocidadeNova;
-		//atributo this, que é da classe principal
+		double velocidadeNova = this.velocidadeAtual + quantidade;
+		this.velocidadeAtual = velocidadeNova; //velcNova é uma variável q foi criada localmente.
+//criou uma variavel VelocidaeNova pq quando acionar o método acelera ele vai criar uma veloc nova
+//vai passar uma quantidade nova de velocidade. O this. é pra procurar qual é o atributo + a quantidade
+//que o parametro que vai passar pra esse método..
 	}
 	int pegaMarcha()
-	{
-		if(this.velocidadeAtual<0)
+	{// n vai passar nenhum parametro, mas ele vai verificar através de um laço condicional se a 
+//velocidade atual está menor que zero ou se está entre zero e menor que 40 e etc..
+		if(this.velocidadeAtual < 0)
 		{
-			return -1;
+			return  -1;
 		}
 		if(this.velocidadeAtual>=0 && this.velocidadeAtual<40)
 		{
@@ -38,5 +37,5 @@ public class Carro {
 		}
 		return 3;
 	}
-	
+// feito tudo isso vai criar um teste pra verificar esses métodos criados. Vou criar outra classe (TesteCarro).
 }

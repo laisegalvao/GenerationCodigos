@@ -1,9 +1,21 @@
 package POO;
 
 public class MetodoSobrecarregado {
-
 	public void testaMetodosSobrecarregados()
 	{
-		System.out.println();
+		System.out.printf("Salário em número inteiro: %d. \n", salario(1000));//método salario, que vamos criar
+		System.out.printf("Salário em número double: %f. \n", salario(7.500));
 	}
+	public int salario(int valorInt) //método salario
+	{
+		System.out.printf("Salário com argumento inteiro: %d. \n", valorInt);
+		return valorInt * valorInt;
+	}
+	public double salario(double valorDouble)
+	{
+		System.out.printf("Salário com argumento double: %f. \n", valorDouble);
+		return valorDouble * valorDouble;
+	}
+//foram criados 2 métodos com o mesmo nome, mas com parâmetros diferentes.(um do tipo Int e outro Double)
+//vamos criar agora outra classe p testar(testaMetodosSobre..)
 }
