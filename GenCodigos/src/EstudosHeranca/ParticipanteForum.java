@@ -19,4 +19,15 @@ public class ParticipanteForum implements Leitor, Programador{ // implements p i
 		return "JAVA";
 	}
 //dps vai criar uma classe para demonstrar tudo isso(TesteInterface)..
+	
+	@Override
+	public void pensando1(char[] ideias) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public String lendo1() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
