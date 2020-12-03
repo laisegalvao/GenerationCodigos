@@ -1,0 +1,145 @@
+ -- create database db_padoca;
+ 
+ use db_padoca;
+ 
+ create table tb_bolo(
+	idBolo bigint auto_increment,
+    descricao varchar(30) not null,
+    amanhecido boolean not null,
+    valor decimal (10,2) not null,
+ 
+	primary key(idBolo)
+ );
+ 
+ create table tb_cliente(
+	idCliente bigint auto_increment,
+    nome varchar (255) not null,
+	cpf char(11) not null,
+    celular char(12) not null,
+    endereco varchar(255) not null,
+    numero int not null,
+    cep char (8) not null,
+ 
+	primary key(idCliente)
+ );
+ 
+ create table tb_pao(
+	idPao bigint auto_increment,
+    descricao varchar (70) not null,
+    disponivel boolean not null,
+    valor decimal (10,2) not null,
+ 
+	primary key(idPao)
+ );
+ 
+  create table tb_bebida(
+	idBebida bigint auto_increment,
+    descricao varchar (60) not null,
+    disponivel boolean not null,
+    valor decimal (10,2) not null,
+ 
+	primary key(idBebida)
+ );
+ 
+ create table tb_forma_pag(
+	idFormaPag int auto_increment,
+    descricao varchar (50) not null,
+ 
+	primary key(idFormaPag)
+ );
+ 
+ create table tb_comanda(
+	idComanda bigint auto_increment,
+    descricao varchar (255) not null,
+    pao_id bigint not null,
+    bolo_id bigint not null,
+    pagamento_id int not null,
+    bebida_id bigint not null,
+    cliente_id bigint not null,
+ 
+	primary key(idComanda),
+    foreign key(bolo_id) references tb_cliente(idBolo),
+    foreign key(pao_id) references tb_pao(idPao),
+    foreign key(cliente_id) references tb_cliente(idCliente),
+    foreign key(bebida_id) references tb_bebida(idBebida),
+    foreign key (pagamento_id) references tb_forma_pag(idFormaPag)
+ );
+ 
+ insert into tb_bolo(descricao, amanhecido, valor)
+	values('milho', true, 15.50);
+insert into tb_bolo(descricao, amanhecido, valor)
+	values('trigo', true, 11.50);
+insert into tb_bolo(descricao, amanhecido, valor)
+	values('chocolate', false, 35.00);
+insert into tb_bolo(descricao, amanhecido, valor)
+	values('café', false, 21.50);
+insert into tb_bolo(descricao, amanhecido, valor)
+	values('mandioca', true, 25.00);
+    
+select * from tb_cliente;
+
+insert into tb_cliente(nome, cpf, celular, endereco, numero, cep)
+	values('Carlos', '000000', '222222', 'Rua X', 2, '11111');
+insert into tb_cliente(nome, cpf, celular, endereco, numero, cep)
+	values('Maria', '000000', '', 'Avenida Sul', 75, '55555');
+insert into tb_cliente(nome, cpf, celular, endereco, numero, cep)
+	values('Carla', '888888', '1111111', 'Av. Paulista', 74, '88888');
+insert into tb_cliente(nome, cpf, celular, endereco, numero, cep)
+	values('Antonio', '77777', '666224', 'Rua Olivia', 96, '66666');
+insert into tb_cliente(nome, cpf, celular, endereco, numero, cep)
+	values('Cinthia', '5555634', '222412', 'Rua Largo', 87, '11111');
+    
+
+insert into tb_pao(descricao, disponivel, valor)
+	values('doce', true, 0.50);
+insert into tb_pao(descricao, disponivel, valor)
+	values('frances', true, 0.30);
+insert into tb_pao(descricao, disponivel, valor)
+	values('carteira', false, 0.30);
+insert into tb_pao(descricao, disponivel, valor)
+	values('italiano', false, 0.80);
+insert into tb_pao(descricao, disponivel, valor)
+	values('Recife', true, 2.00);
+    
+    
+insert into tb_bebida(descricao, disponivel, valor)
+	values('suco', true, 5.00);
+insert into tb_bebida(descricao, disponivel, valor)
+	values('refrigerante', true, 7.00);
+insert into tb_bebida(descricao, disponivel, valor)
+	values('agua', false, 2.00);
+insert into tb_bebida(descricao, disponivel, valor)
+	values('cafe', false, 2.50);
+insert into tb_bebida(descricao, disponivel, valor)
+	values('leite', true, 1.50);
+    
+    
+insert into  tb_forma_pag(descricao)
+	values('cartaoCredito');
+insert into  tb_forma_pag(descricao)
+	values('cartaoDebito');
+insert into  tb_forma_pag(descricao)
+	values('dinheiro');
+insert into  tb_forma_pag(descricao)
+	values('valeRefeicao');
+insert into  tb_forma_pag(descricao)
+	values('ticket');
+    
+insert into tb_comanda(descricao, pao_id, bolo_id, pagamento_id, bebida_id, cliente_id)
+	values('consuma', 1, 5, 3, 4, 5);
+insert into tb_comanda(descricao, pao_id, bolo_id, pagamento_id, bebida_id, cliente_id)
+	values('consuma', 1, 3, 2, 4, 5);
+insert into tb_comanda(descricao,pao_id, bolo_id, pagamento_id, bebida_id, cliente_id)
+	values('viagem', 2, 3, 4, 5, 1);
+insert into tb_comanda(descricao, pao_id, bolo_id, pagamento_id, bebida_id, cliente_id)
+	values('viagem', 1, 4, 2, 3, 5);
+insert into tb_comanda(descricao, pao_id, bolo_id, pagamento_id, bebida_id, cliente_id)
+	values('viagem', 2, 3, 4, 5, 1);
+    
+    select * from tb_comanda;
+    select * from tb_bolo;
+    select * from tb_cliente;
+    select * from tb_pao;
+    select * from tb_bebida;
+    select * from tb_forma_pag;
+ 
