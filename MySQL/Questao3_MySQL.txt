@@ -1,0 +1,74 @@
+Atividade 3 - MySQL
+
+(criação do banco de dados)
+-- create database db_servicorh;
+
+(criação da tabela)
+-- use db_servicorh; 
+
+
+create table tb_funcionarios(
+    id bigint(3) auto_increment,
+    nome varchar(30),
+    idade int (2),
+    funcao varchar(20),
+    salario decimal (6),
+    
+    primary key (id) 
+);	
+
+(populando a tabela)
+
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Ana Lucia Silva", 37, "analista", null);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Patricia Souza", 24, "servicos gerais", 1500.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Fernanda Lima", 35, "Senior", 15000.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Jose Carlos", 23, "advogado", 5000.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Maria das Dores", 47, "analista", 3000.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Joao Melo", 52, "Diretor", 7000.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Luiz Antonio Gaviao", 20, "Desenvolver Jr.", null);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Paula Antonia Sobral", 42, "Gerente de vendas", 8000.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Maria Peixoto", 22, null, null);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Lucas Lemos", 23, "analista", 3000.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Carlos Chagas", 37, "vendedor", 1700.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Ana Paula Galvao", 20, "estagiaria", 1300.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Antonio Marinho", 27, null, null);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Carla Santos", 24, "analista de gestao", 1800.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Mario Santana", 40, "socio", 7000.00);
+
+(visualizando a tabela)
+select * from tb_funcionarios; 
+
+(retornando funcionários com o salário maior do que 2000)
+-- select * from tb_funcionarios where salario > 2000.00;
+
+(retornando funcionários com o salário maior do que 2000)
+-- select * from tb_funcionarios where salario < 2000.00;
+
+(atualize um dado desta tabela através de uma query de atualização)
+-- update tb_funcionarios set salario = 10.00 where id = 13;
+
+(Delete pelo menos um dado de acordo com a sua preferencia)
+-- delete from tb_funcionarios where nome = 'Antonio Marinho';
+
+-- delete from tb_funcionarios where salario is null;
+
+(testando outras possibilidades de inserção)
+-- insert into tb_funcionarios (id, nome, idade, funcao, salario) 
+-- values(1,"Ana Lucia Silva", 37, "analista", null);
+
+ 

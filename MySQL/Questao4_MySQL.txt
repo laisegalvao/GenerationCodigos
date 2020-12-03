@@ -1,0 +1,53 @@
+Questao4_MySQL
+
+-- create database db_ecommerce;
+
+-- use db_ecommerce;
+
+-- create table tb_produtos(
+	-- id bigint(3) auto_increment,
+    -- valor decimal(6),
+    -- marca varchar(20),
+    -- tipo varchar(20),
+    -- localidade varchar (10),
+    -- primary key (id)
+-- );
+
+-- select * from tb_produtos;
+
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Ana Lucia Silva", 37, "analista", null);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Patricia Souza", 24, "servicos gerais", 1500.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Fernanda Lima", 35, "Senior", 15000.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Jose Carlos", 23, "advogado", 5000.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Maria das Dores", 47, "analista", 3000.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Joao Melo", 52, "Diretor", 7000.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Luiz Antonio Gaviao", 20, "Desenvolver Jr.", null);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Paula Antonia Sobral", 42, "Gerente de vendas", 8000.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Maria Peixoto", 22, null, null);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Lucas Lemos", 23, "analista", 3000.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Carlos Chagas", 37, "vendedor", 1700.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Ana Paula Galvao", 20, "estagiaria", 1300.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Antonio Marinho", 27, null, null);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Carla Santos", 24, "analista de gestao", 1800.00);
+insert into tb_funcionarios(nome, idade, funcao, salario) 
+	values("Mario Santana", 40, "socio", 7000.00);
+
+-- select * from tb_produtos where valor > 500.00;
+-- select * from tb_produtos where valor < 500.00;
+-- select * from tb_produtos where valor >= 700 and valor <= 900;
+-- delete from tb_produtos where valor = 81;
+      

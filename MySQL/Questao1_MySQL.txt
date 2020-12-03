@@ -1,0 +1,18 @@
+Questão1MySQL
+
+ Explique com suas palavras e cite exemplos utilizando no mínimo 2 linhas para cada alternativa.
+
+a) Select: Para consultar/visualizar o que tem dentro da base de dados desejada. Ex: criei uma tabela com 3 atributos(colunas): nome, idade, peso. Ao escrever o comando select consigo visualizar esses atributos na tabela.
+
+b) Insert : Para popular a tabela. Ex.: uma vez que tenho os atributos da minha tabela irei colocar valores para esses atributos, para inseri-los usa-se o insert.
+
+c) Update: Para modificar algum valor existente dentro da tabela, ou seja, coloquei um dado/atributo mas quero modificar). Ex.: Meu atributo era nome, mas quero mudar para idade.
+
+d) Delete: Para apagar algum valor que foi colocado no atributo tabela (apaga a linha). Ex.: crie uma atributo marca, e inseri dois valores para ela(duas marcas), mas quero apagar a segunda marca que coloquei, usa-se o delete.
+
+e) Create Table: Para criar uma tabela. 
+
+f) Drop Table: Para remover tabela do banco de dado, mas remove a tabela por completo.
+
+g) Alter Table: Para modificar uma definição de tabela alterando, adicionando ou descartando colunas e restrições.
+

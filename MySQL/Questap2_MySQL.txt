@@ -1,0 +1,15 @@
+Questão2MySQL
+
+Informe pelo menos 5 tipagens utilizadas no Mysql e diga a sua equivalência em Java (ex: varchar = String)
+
+a) Bigint = long________________________
+
+b) Int = int (inteiro)_____________________
+
+c) Boolean = boolean (true/false) _________
+
+d) Decimal = double_____________________
+
+e) Varchar = String______________________
+
+

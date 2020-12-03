@@ -1,0 +1,58 @@
+Questão5MySQL
+
+-- create database db_escola;
+
+-- use db_escola;
+
+--  table tb_alunes(
+	-- id bigint(3) auto_increment,
+	-- nome varchar(30),
+    -- nota decimal(3,2),
+    -- serie varchar(3),
+	-- frequencia int(15),
+    
+-- primary key (id)
+-- );
+
+-- select * from tb_alunes;
+
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values('Ana Lucia Silva', 10.0, '7A', 0);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Patricia Souza", 9.4, "8D", 1);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Fernanda Lima", 8.52, "9A", 1);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Jose Carlos", 5.0, "7A", 1);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Carlos Augusto Pereira", 2.4, "7A", 0);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Maria das Dores", 7.4, "6A", 1);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Joao Melo", 10.0, "8C", 0);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Luiz Antonio Gaviao", 6.5, "1A", 0);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Paula Antonia Sobral", 4.3, "9A", 0);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Maria Peixoto", 6.4, "7A", 1);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Lucas Lemos", 10.0, "7C", 1);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Carlos Chagas",10.0, "1A", 1);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Ana Paula Galvao", 7.3, "2B", 0);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Antonio Marinho", 3.5, "5C", 0);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Carla Santos", 8.8, "5A", 1);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Mario Santana", 8.3, "5B", 1);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Ana Clara Silva", 6.1, "8A", 0);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Katarina de Melo", 5.7, "9A", 1);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Maria Julia Freitas", 6.9, "1C", 1);
+insert into tb_alunes(nome, nota, serie, frequencia)
+	values("Yuri Aurelio",10.0, "3B", 1);

@@ -1,0 +1,90 @@
+
+
+use db_RH2;
+
+-- create table tb_cargo(
+     -- id bigint(3) auto_increment,
+     -- funcao varchar(15),
+     -- salario int (8),
+	 
+     -- primary key (id)
+-- );
+
+create table tb_funcionario(
+     codigo bigint(3) auto_increment,
+     nome varchar(25),
+     idade int (2),
+     telefone varchar(15),
+     cargo_id bigint,
+     
+     primary key (codigo),
+     foreign key (cargo_id) references tb_cargo(id)
+);
+
+insert into tb_cargo(funcao, salario)
+	values('Ascensorista', 1700);
+insert into tb_cargo(funcao, salario)
+	values('Desenvolvedor', 3000);
+insert into tb_cargo(funcao, salario)
+	values('Analista', 2500);
+insert into tb_cargo(funcao, salario)
+	values('Secretario', 1600);
+insert into tb_cargo(funcao, salario)
+	values('Monitor', 3500);
+
+
+
+insert into tb_funcionario(nome, idade,telefone, cargo_id) 
+	values("Ana Lucia Silva", 37, "3321-7841", 2);
+insert into tb_funcionario(nome, idade, telefone, cargo_id) 
+	values("Patricia Souza", 24, "99254-1111", 2);
+insert into tb_funcionario(nome, idade, telefone, cargo_id) 
+	values("Fernanda Lima", 35, "2222-2222", 3);
+insert into tb_funcionario(nome, idade, telefone, cargo_id) 
+	values("Jose Carlos", 23, "3333-3333", 1);
+insert into tb_funcionario(nome, idade, telefone, cargo_id) 
+	values("Maria das Dores", 47, "777-4523", 5);
+insert into tb_funcionario(nome, idade, telefone, cargo_id) 
+	values("Joao Melo", 52, "7777-9999", 3);
+insert into tb_funcionario(nome, idade, telefone, cargo_id) 
+	values("Luiz Antonio Gaviao", 20, "3333-4441", 1);
+insert into tb_funcionario(nome, idade, telefone, cargo_id) 
+	values("Paula Antonia Sobral", 42, "2222-0000", 4);
+insert into tb_funcionario(nome, idade,telefone, cargo_id) 
+	values("Maria Peixoto", 22, "1111-7774", 3);
+insert into tb_funcionario(nome, idade, telefone, cargo_id) 
+	values("Lucas Lemos", 23, "0000-3333", 3);
+insert into tb_funcionario(nome, idade, telefone, cargo_id) 
+	values("Carlos Chagas", 37, "3334-9647", 1);
+insert into tb_funcionario(nome, idade,telefone, cargo_id) 
+	values("Ana Paula Galvao", 20, "2222-6666", 4);
+insert into tb_funcionario(nome, idade,telefone, cargo_id) 
+	values("Antonio Marinho", 27, "8888-4444", 2);
+insert into tb_funcionario(nome, idade, telefone, cargo_id) 
+	values("Carla Santos", 24, "7777-6666", 2);
+insert into tb_funcionario(nome, idade, telefone, cargo_id) 
+	values("Mario Santana", 40, "9999-8888", 5);
+
+-- Faça um select que retorne os funcionários com o salário maior do que 2000.
+    	-- select * from tb_cargo where salario > 2000;
+forma correta:  -- select * from tb_funcionario
+    -- inner join tb_cargo on tb_cargo.id = tb_funcionario.cargo_id
+    -- where salario > 2000;
+    
+-- Faça um select trazendo os funcionários com salário entre 1000 e 2000.
+	-- select * from tb_cargo where salario >= 1000 and salario <= 2000
+forma correta:select * from tb_funcionario
+    inner join tb_cargo on tb_cargo.id = tb_funcionario.cargo_id
+    where salario >= 1000 and salario <= 2000;
+
+-- Faça um select utilizando LIKE buscando os Funcionários com a letra C.
+-- select * from tb_funcionario where nome like '%C%';
+
+-- Faça um um select com Inner join entre tabela cargos e funcionarios.
+  select * from tb_funcionario
+  inner join tb_cargo on tb_cargo.id = tb_funcionario.cargo_id;
+
+ -- Faça um select onde traga todos os funcionários de um cargo específico
+ -- select * from tb_funcionario
+ -- inner join tb_cargo on tb_cargo.id = tb_funcionario.cargo_id
+ -- where tb_cargo.funcao = 'Desenvolvedor' 

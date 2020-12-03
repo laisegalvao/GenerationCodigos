@@ -1,0 +1,83 @@
+-- create database db_ecommerce2;
+
+use db_ecommerce2;
+
+create table tb_categoria(
+	 id bigint(3) auto_increment,
+	 tipo varchar(35),
+	 classificacao varchar(35),
+	 
+	primary key (id)
+);
+
+create table tb_produto(
+	catalogo bigint(3) auto_increment,
+	nome varchar(30),
+	valor decimal (10,2),
+	localidade varchar(25),
+	categoria_id bigint,
+     
+     primary key (catalogo),
+     foreign key (categoria_id) references tb_categoria(id)
+);
+
+insert into tb_categoria(tipo, classificacao)
+	values('livro', 'infantil');
+insert into tb_categoria(tipo, classificacao)
+	values('carro', 'adulto');
+insert into tb_categoria(tipo, classificacao)
+	values('roupas', 'juvenil');
+insert into tb_categoria(tipo, classificacao)
+	values('bebidas', 'adulto');
+insert into tb_categoria(tipo, classificacao)
+	values('comida', 'livre');
+
+insert into tb_produto(nome, valor,localidade, categoria_id) 
+	values("sanduiche", 4.99 , "nacional", 5);
+insert into tb_produto(nome, valor,localidade, categoria_id) 
+	values("Parati", 50000.00, "importado", 2);
+insert into tb_produto(nome,valor,localidade, categoria_id) 
+	values("A Arca de Noé", 21.99, "nacional", 1);
+insert into tb_produto(nome, valor,localidade, categoria_id) 
+	values("O sitio do pica pau amarelo", 30.00, "nacional", 1);
+insert into tb_produto(nome, valor,localidade, categoria_id) 
+	values("Vinho", 60.78, "importado", 4);
+insert into tb_produto(nome, valor,localidade, categoria_id) 
+	values("bolo de rolo", 35.00, "nacional", 5);
+insert into tb_produto(nome,valor,localidade, categoria_id)  
+	values("Lagosta", 200.00, "importado", 5);
+insert into tb_produto(nome, valor,localidade, categoria_id) 
+	values("Mercedes", 70000.00, "importado", 2);
+insert into tb_produto(nome, valor,localidade, categoria_id)  
+	values("Jaqueta", 125.68, "nacional", 3);
+insert into tb_produto(nome,valor,localidade, categoria_id) 
+	values("Calça", 85.69, "importado", 3);
+insert into tb_produto(nome, valor,localidade, categoria_id)  
+	values("O pessego gigante", 27.99, "importado", 1);
+insert into tb_produto(nome, valor,localidade, categoria_id) 
+	values("Cerveja", 4.50, "nacional", 4);
+insert into tb_produto(nome, valor,localidade, categoria_id)  
+	values("Fusca", 25000.00, "importado", 2);
+insert into tb_produto(nome, valor,localidade, categoria_id) 
+	values("Gin", 300.00, "importado", 2);
+insert into tb_produto(nome, valor,localidade, categoria_id) 
+	values("cuscuz com charque", 10.99, "nacional", 5);
+
+
+-- Faça um select que retorne os Produtos com o valor maior do que 2000.
+	-- select * from tb_produto
+    -- inner join tb_categoria on tb_categoria.id = tb_produto.categoria_id
+    -- where valor > 2000;
+
+-- Faça um select trazendo os Produtos com valor entre 1000 e 2000.
+    select * from tb_produto
+    inner join tb_categoria on tb_categoria.id = tb_produto.categoria_id
+    where valor >= 1000 and valor <= 2000;
+
+ -- Faça um select utilizando LIKE buscando os Produtos com a letra C.
+    -- select * from tb_produto where nome like '%C%';
+
+-- Faça um select onde traga todos os Produtos de uma categoria específica
+-- select * from tb_produto
+ -- inner join tb_categoria on tb_categoria.id = tb_produto.categoria_id
+ -- where tb_categoria.tipo = 'livro' 
