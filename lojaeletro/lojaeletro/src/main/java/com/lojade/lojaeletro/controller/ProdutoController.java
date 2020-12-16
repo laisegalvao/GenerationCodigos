@@ -27,20 +27,22 @@ public class ProdutoController {
 	private ProdutoRepository repository;
 	
 	@GetMapping
-	public ResponseEntity<List<Produto>> getAllProduto(){
+	public ResponseEntity<List<Produto>> getAllProduto(){ //pepa tudo de produto
 		return ResponseEntity.ok(repository.findAll());
 	}
 	@GetMapping("/{id}")
-	public ResponseEntity<Produto> getByIdProduto(@PathVariable long id){
+	public ResponseEntity<Produto> getByIdProduto(@PathVariable long id){ //Produto é o nome da classe(q está em Model)
 		
-		return repository.findById(id).map(produto -> ResponseEntity.ok(produto))
+		return repository.findById(id).map(produto -> ResponseEntity.ok(produto)) //map. olha chave e valor
 				.orElse(ResponseEntity.badRequest().build());
 	}
 	
-	@GetMapping("/{valor1}/{valor2}")
+	@GetMapping("/valor/{valor1}/{valor2}")
 	public ResponseEntity<List<Produto>> getByIdValor2(@PathVariable float valor1, @PathVariable float valor2){
 		return ResponseEntity.ok(repository.maiorQueMenorQue(valor1, valor2));
 	}
+	
+	// fazer o segundo método do repository:
 	
 	//Metodo Post
 	@PostMapping

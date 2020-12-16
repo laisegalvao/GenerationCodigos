@@ -14,4 +14,9 @@ public interface ProdutoRepository  extends JpaRepository<Produto, Long> {
 
 	@Query(value = "select * from tb_produto where preco > :valor1 and preco < :valor2", nativeQuery = true)
 	public List<Produto> maiorQueMenorQue(@Param("valor1") float valor1, @Param("valor2" ) float valor2);
+	
+	//@Query(valeu = "select * from tb_produto inner join tb_tipoeletro on tb_produto.id = tb_tipoeletro.id 
+	//where tb_tipoeletro.descricao like: descricao% and tb_produto.valor <= valor", nativequery)
+	//public List<Produto> menorValor(@Param("descricao") String descricao, @Param("valor" ) float valor;
+	
 }
