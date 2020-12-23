@@ -2,8 +2,8 @@ package PacoteExercicios4;
 
 import java.util.Scanner;
 
-public class Questao3_While {
-//Solicitar a idade de várias pessoas e imprimir: Total de pessoas com menos 
+public class Questao03_While {
+//Solicitar a idade de varias pessoas e imprimir: Total de pessoas com menos 
 //de 21 anos. Total de pessoas com mais de 50 anos. O programa termina quando 
 //a idade for =-99. (WHILE)
 	

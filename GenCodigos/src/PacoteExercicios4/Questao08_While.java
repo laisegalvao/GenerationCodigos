@@ -2,7 +2,12 @@ package PacoteExercicios4;
 
 import java.util.Scanner;
 
-public class Questao8_While {
+public class Questao08_While {
+//Elaborar um programa que efetue a leitura sucessiva de valores numericos e apresente no final 
+//o total do somatorio, a media e o total de valores lidos.O programa deve fazer as leituras dos
+//valores enquanto o usuario estiver fornecendo valores positivos.Ou seja, o programa deve parar 
+//quando o usuario fornecer um valor negativo. (WHILE)
+ 
 
 	public static void main(String[] args)
 	{

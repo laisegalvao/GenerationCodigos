@@ -2,7 +2,11 @@ package PacoteExercicios4;
 
 import java.util.Scanner;
 
-public class Questao4_DoWhile {
+public class Questao04_DoWhile {
+//Crie um programa que leia um número do teclado ate que encontre um numero
+//igual a zero. No final, mostre a soma dos numeros digitados.(DO...WHILE)
+
+	
 	
 	public static void main(String[] args)
 	{

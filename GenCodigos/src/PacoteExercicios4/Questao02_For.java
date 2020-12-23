@@ -2,7 +2,7 @@ package PacoteExercicios4;
 
 import java.util.Scanner;
 
-public class Questao2_For {
+public class Questao02_For {
 //Ler 10 números e imprimir quantos são pares e quantos são ímpares. (FOR)
 
 	public static void main(String[] args)
